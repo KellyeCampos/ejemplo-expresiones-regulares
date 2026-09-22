@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador Avanzado con Expresiones Regulares | UDB</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>Laboratorio de Regex</h1>
+            <p>Investigación Aplicada 2 - Universidad Don Bosco</p>
+        </header>
+
+        <main class="card">
+            <section class="info-section">
+                <h2>¿Qué es una Expresión Regular?</h2>
+                <p>Una expresión regular (regex) es una secuencia de caracteres que forma un patrón de búsqueda. Se utilizan en JavaScript y otros lenguajes para la validación de formularios, búsqueda de textos y manipulación avanzada de cadenas.</p>
+            </section>
+
+            <hr class="divider">
+
+            <section class="interactive-section">
+                <h2>Prueba Práctica de Validación</h2>
+                <p class="instruction">Selecciona qué deseas validar y escribe el texto:</p>
+
+                <div class="form-group">
+                    <label for="tipoValidacion">Tipo de Validación:</label>
+                    <select id="tipoValidacion" onchange="actualizarPlaceholder()">
+                        <option value="correo">Correo Electrónico</option>
+                        <option value="telefono">Teléfono (Formato UDB: 8 dígitos)</option>
+                        <option value="carnet">Carnet Universitario (Ej: AB21001)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputDato">Introduce el texto:</label>
+                    <input type="text" id="inputDato" placeholder="ejemplo@correo.com">
+                </div>
+
+                <button onclick="ejecutarValidacion()">Validar Patrón</button>
+
+                <div id="resultado" class="hidden">
+                    <span id="mensajeResultado"></span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desarrollado para fines académicos - Ingeniería en Ciencias de la Computación</p>
+        </footer>
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="js/app.js"></script>
+</body>
+</html>
